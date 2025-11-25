@@ -36,3 +36,20 @@ def clean_data(df):
 
     return df                   
 
+
+# Save clean data to CSV file.
+
+def save_csv(df, filepath):
+    
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+
+    df.to_csv(filepath, index=False)
+
+
+def main():
+    df = load_data(RAW_DATA_PATH)
+    cleaned = clean_data(df)
+    save_csv(cleaned, CLEANED_DATA_PATH)
+
+if __name__ == "__main__":
+    main()

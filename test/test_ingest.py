@@ -49,3 +49,23 @@ def test_clean_data_basic():
     # Label mapping
     assert cleaned.loc[0, "category"] == ingest.LABEL_MAP[1]
     assert cleaned.loc[1, "category"] == ingest.LABEL_MAP[2]
+
+#save_csv should write a CSV that can be read back.
+
+def test_save_csv_writes_file(tmp_path: Path):
+
+    df = pd.DataFrame(
+        [
+            {"news_text": "Some text", "category": "world"},
+            {"news_text": "Other text", "category": "sports"},
+        ]
+    )
+
+    out_path = tmp_path / "ag_news_clean.csv"
+    ingest.save_csv(df, out_path)
+
+    assert out_path.exists()
+
+    loaded = pd.read_csv(out_path)
+    assert list(loaded.columns) == ["news_text", "category"]
+    assert len(loaded) == 2
