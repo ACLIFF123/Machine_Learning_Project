@@ -26,3 +26,26 @@ def test_load_data_reads_jsonl(tmp_path: Path):
     assert set(["label", "title", "description"]).issubset(df.columns)
 
 
+#clean_data should combine title+description and map labels.
+def test_clean_data_basic():
+    
+    df = pd.DataFrame(
+        [
+            {"label": 1, "title": "News A", "description": "Desc A"},
+            {"label": 2, "title": "News B", "description": "Desc B"},
+        ]
+    )
+
+    cleaned = ingest.clean_data(df)
+
+    # Only keep these two columns
+    assert list(cleaned.columns) == ["news_text", "category"]
+    assert len(cleaned) == 2
+
+    # Combined text
+    assert cleaned.loc[0, "news_text"] == "News A Desc A"
+    assert cleaned.loc[1, "news_text"] == "News B Desc B"
+
+    # Label mapping
+    assert cleaned.loc[0, "category"] == ingest.LABEL_MAP[1]
+    assert cleaned.loc[1, "category"] == ingest.LABEL_MAP[2]
