@@ -5,7 +5,6 @@ from src import ingest
 
 
 def test_load_data_reads_jsonl(tmp_path: Path):
-    """load_data should read a JSONL file into a DataFrame."""
 
     # Create a temporary JSONL file
     jsonl_content = "\n".join([
