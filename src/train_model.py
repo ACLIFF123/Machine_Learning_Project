@@ -7,3 +7,11 @@ def load_cleaned_data(filepath = CLEANED_DATA_PATH):
     return pd.read_csv(filepath)
 
 
+def main():
+    df = load_cleaned_data()
+    print (df.head())
+        
+
+if __name__ == "__main__":
+    main()
+    
