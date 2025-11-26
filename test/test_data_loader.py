@@ -3,7 +3,6 @@ import pandas as pd
 import os 
 
 def test_load_dataset(tmp_path):
-
     
     csv_file = tmp_path / "sample.csv"
     csv_file.write_text("news_text,category\n", encoding="utf-8")

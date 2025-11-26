@@ -1,4 +1,5 @@
 import logging
+import os
 
 def get_logger(name: str = __name__) -> logging.Logger:
 
@@ -13,5 +14,10 @@ def get_logger(name: str = __name__) -> logging.Logger:
         )
         handler.setFormatter(formatter)
         logger.addHandler(handler)
+
+        os.makedirs("logs", exist_ok=True)
+        file_handler = logging.FileHandler("logs/app.log")
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
 
     return logger
