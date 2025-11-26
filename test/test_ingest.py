@@ -3,7 +3,6 @@ from pathlib import Path
 import pandas as pd
 from src import ingest
 
-
 def test_load_data_reads_jsonl(tmp_path: Path):
 
     # Create a temporary JSONL file
@@ -23,7 +22,6 @@ def test_load_data_reads_jsonl(tmp_path: Path):
     assert len(df) == 2
 
     assert set(["label", "title", "description"]).issubset(df.columns)
-
 
 #clean_data should combine title+description and map labels.
 def test_clean_data_basic():
