@@ -1,4 +1,4 @@
-from src.train_model import load_cleaned_data
+from src.train_model import load_cleaned_data, split_dataset
 import pandas as pd
 import os 
 
@@ -16,5 +16,15 @@ def test_load_dataset(tmp_path):
     assert isinstance(df, pd.DataFrame)
     assert "news_text" in df.columns
     assert "category" in df.columns
-    
 
+
+def test_split_dataset():
+    X = pd.Series(["a", "b", "c", "d"])
+    y = pd.Series(["x", "x", "y", "y"])
+    result = split_dataset(X,y, random_seed=42, test_size=0.2)
+    assert len(result) == 4
+    X_train, X_val, y_train, y_val = result
+    assert len(X_train) == 3
+    assert len(X_val) == 1
+    assert len(y_train) == 3
+    assert len(y_val) == 1
