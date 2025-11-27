@@ -21,3 +21,5 @@ def get_logger(name: str = __name__) -> logging.Logger:
         logger.addHandler(file_handler)
 
     return logger
+
+

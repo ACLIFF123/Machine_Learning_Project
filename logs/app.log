@@ -96,7 +96,7 @@ Classification Report:
 weighted avg       0.91      0.91      0.91     24000
 
 2025-11-26 22:09:47,046 - models.model_classifier - INFO - Model saved to model/model.pkl
-2025-11-26 22:10:49,573 - __main__ - INFO - Loading cleaned dataset
+2025-11-26 22:10:49random_forest,573 - __main__ - INFO - Loading cleaned dataset
 2025-11-26 22:10:50,137 - __main__ - INFO - Splitting dataset
 2025-11-26 22:10:50,160 - __main__ - INFO - Train size: 96000
 2025-11-26 22:10:50,161 - __main__ - INFO - Validation size: 24000
@@ -133,15 +133,48 @@ Classification Report:
 weighted avg       0.92      0.92      0.92     24000
 
 2025-11-26 22:25:37,148 - models.model_classifier - INFO - Model saved to model/model.pkl
-2025-11-26 22:38:09,425 - src.models.model_classifier - INFO - Training model
-2025-11-26 22:38:09,444 - src.models.model_classifier - INFO - Training model
-2025-11-26 22:38:09,453 - src.models.model_classifier - INFO - Evaluating model
-2025-11-26 22:38:09,480 - src.models.model_classifier - INFO - Accuracy:  1.000
-2025-11-26 22:38:09,481 - src.models.model_classifier - INFO - 
+2025-11-27 11:05:44,736 - __main__ - INFO - Loading cleaned dataset
+2025-11-27 11:05:45,343 - __main__ - INFO - Splitting dataset
+2025-11-27 11:05:45,367 - __main__ - INFO - Train size: 96000
+2025-11-27 11:05:45,367 - __main__ - INFO - Validation size: 24000
+2025-11-27 11:05:45,367 - models.model_classifier - INFO - Training model
+2025-11-27 11:28:42,450 - __main__ - INFO - Loading cleaned dataset
+2025-11-27 11:28:42,833 - __main__ - INFO - Splitting dataset
+2025-11-27 11:28:42,851 - __main__ - INFO - Train size: 96000
+2025-11-27 11:28:42,852 - __main__ - INFO - Validation size: 24000
+2025-11-27 11:28:42,852 - models.model_classifier - INFO - Training model
+2025-11-27 11:29:11,751 - models.model_classifier - INFO - Evaluating model
+2025-11-27 11:29:13,333 - models.model_classifier - INFO - Accuracy:  0.917
+2025-11-27 11:29:13,334 - models.model_classifier - INFO - 
+Confusion Matrix:
+[[5238  457   47  169]
+ [ 393 5451   55  176]
+ [  35   21 5958   44]
+ [ 245  141  199 5371]]
+2025-11-27 11:29:13,334 - models.model_classifier - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    business       0.89      0.89      0.89      5911
+    sci/tech       0.90      0.90      0.90      6075
+      sports       0.95      0.98      0.97      6058
+       world       0.93      0.90      0.92      5956
+
+    accuracy                           0.92     24000
+   macro avg       0.92      0.92      0.92     24000
+weighted avg       0.92      0.92      0.92     24000
+
+2025-11-27 11:29:13,351 - models.model_classifier - INFO - Model saved to model/model.pkl
+2025-11-27 11:35:46,746 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 11:49:55,868 - src.models.model_classifier - INFO - Training model
+2025-11-27 11:49:55,909 - src.models.model_classifier - INFO - Training model
+2025-11-27 11:49:55,949 - src.models.model_classifier - INFO - Evaluating model
+2025-11-27 11:49:56,007 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-27 11:49:56,008 - src.models.model_classifier - INFO - 
 Confusion Matrix:
 [[1 0]
  [0 1]]
-2025-11-26 22:38:09,482 - src.models.model_classifier - INFO - 
+2025-11-27 11:49:56,009 - src.models.model_classifier - INFO - 
 Classification Report:
               precision    recall  f1-score   support
 
@@ -152,15 +185,15 @@ Classification Report:
    macro avg       1.00      1.00      1.00         2
 weighted avg       1.00      1.00      1.00         2
 
-2025-11-26 22:38:38,344 - src.models.model_classifier - INFO - Training model
-2025-11-26 22:38:38,357 - src.models.model_classifier - INFO - Training model
-2025-11-26 22:38:38,362 - src.models.model_classifier - INFO - Evaluating model
-2025-11-26 22:38:38,385 - src.models.model_classifier - INFO - Accuracy:  1.000
-2025-11-26 22:38:38,386 - src.models.model_classifier - INFO - 
+2025-11-27 11:52:25,465 - src.models.model_classifier - INFO - Training model
+2025-11-27 11:52:25,507 - src.models.model_classifier - INFO - Training model
+2025-11-27 11:52:25,526 - src.models.model_classifier - INFO - Evaluating model
+2025-11-27 11:52:25,591 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-27 11:52:25,595 - src.models.model_classifier - INFO - 
 Confusion Matrix:
 [[1 0]
  [0 1]]
-2025-11-26 22:38:38,387 - src.models.model_classifier - INFO - 
+2025-11-27 11:52:25,598 - src.models.model_classifier - INFO - 
 Classification Report:
               precision    recall  f1-score   support
 
@@ -171,3 +204,141 @@ Classification Report:
    macro avg       1.00      1.00      1.00         2
 weighted avg       1.00      1.00      1.00         2
 
+2025-11-27 11:52:43,083 - src.models.model_classifier - INFO - Training model
+2025-11-27 11:52:43,133 - src.models.model_classifier - INFO - Training model
+2025-11-27 11:52:43,150 - src.models.model_classifier - INFO - Evaluating model
+2025-11-27 11:52:43,214 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-27 11:52:43,215 - src.models.model_classifier - INFO - 
+Confusion Matrix:
+[[1 0]
+ [0 1]]
+2025-11-27 11:52:43,215 - src.models.model_classifier - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    sci/tech       1.00      1.00      1.00         1
+      sports       1.00      1.00      1.00         1
+
+    accuracy                           1.00         2
+   macro avg       1.00      1.00      1.00         2
+weighted avg       1.00      1.00      1.00         2
+
+2025-11-27 11:57:13,218 - src.models.model_classifier - INFO - Training model
+2025-11-27 11:57:13,242 - src.models.model_classifier - INFO - Training model
+2025-11-27 11:57:13,259 - src.models.model_classifier - INFO - Evaluating model
+2025-11-27 11:57:13,301 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-27 11:57:13,302 - src.models.model_classifier - INFO - 
+Confusion Matrix:
+[[1 0]
+ [0 1]]
+2025-11-27 11:57:13,303 - src.models.model_classifier - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    sci/tech       1.00      1.00      1.00         1
+      sports       1.00      1.00      1.00         1
+
+    accuracy                           1.00         2
+   macro avg       1.00      1.00      1.00         2
+weighted avg       1.00      1.00      1.00         2
+
+2025-11-27 12:01:29,636 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:01:29,670 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:01:29,688 - src.models.model_classifier - INFO - Evaluating model
+2025-11-27 12:01:29,719 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-27 12:01:29,719 - src.models.model_classifier - INFO - 
+Confusion Matrix:
+[[1 0]
+ [0 1]]
+2025-11-27 12:01:29,720 - src.models.model_classifier - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    sci/tech       1.00      1.00      1.00         1
+      sports       1.00      1.00      1.00         1
+
+    accuracy                           1.00         2
+   macro avg       1.00      1.00      1.00         2
+weighted avg       1.00      1.00      1.00         2
+
+2025-11-27 12:01:29,764 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 12:01:54,700 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:01:54,725 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:01:54,748 - src.models.model_classifier - INFO - Evaluating model
+2025-11-27 12:01:54,776 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-27 12:01:54,776 - src.models.model_classifier - INFO - 
+Confusion Matrix:
+[[1 0]
+ [0 1]]
+2025-11-27 12:01:54,776 - src.models.model_classifier - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    sci/tech       1.00      1.00      1.00         1
+      sports       1.00      1.00      1.00         1
+
+    accuracy                           1.00         2
+   macro avg       1.00      1.00      1.00         2
+weighted avg       1.00      1.00      1.00         2
+
+2025-11-27 12:01:54,832 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 12:09:03,018 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:09:03,059 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:09:03,085 - src.models.model_classifier - INFO - Evaluating model
+2025-11-27 12:09:03,126 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-27 12:09:03,128 - src.models.model_classifier - INFO - 
+Confusion Matrix:
+[[1 0]
+ [0 1]]
+2025-11-27 12:09:03,128 - src.models.model_classifier - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    sci/tech       1.00      1.00      1.00         1
+      sports       1.00      1.00      1.00         1
+
+    accuracy                           1.00         2
+   macro avg       1.00      1.00      1.00         2
+weighted avg       1.00      1.00      1.00         2
+
+2025-11-27 12:09:03,165 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 12:09:56,684 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:09:56,720 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:09:56,735 - src.models.model_classifier - INFO - Evaluating model
+2025-11-27 12:09:56,785 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-27 12:09:56,785 - src.models.model_classifier - INFO - 
+Confusion Matrix:
+[[1 0]
+ [0 1]]
+2025-11-27 12:09:56,786 - src.models.model_classifier - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    sci/tech       1.00      1.00      1.00         1
+      sports       1.00      1.00      1.00         1
+
+    accuracy                           1.00         2
+   macro avg       1.00      1.00      1.00         2
+weighted avg       1.00      1.00      1.00         2
+
+2025-11-27 12:09:56,830 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 12:18:20,412 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:18:20,451 - src.models.model_classifier - INFO - Training model
+2025-11-27 12:18:20,470 - src.models.model_classifier - INFO - Evaluating model
+2025-11-27 12:18:20,499 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-27 12:18:20,500 - src.models.model_classifier - INFO - 
+Confusion Matrix:
+[[1 0]
+ [0 1]]
+2025-11-27 12:18:20,500 - src.models.model_classifier - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    sci/tech       1.00      1.00      1.00         1
+      sports       1.00      1.00      1.00         1
+
+    accuracy                           1.00         2
+   macro avg       1.00      1.00      1.00         2
+weighted avg       1.00      1.00      1.00         2
+
+2025-11-27 12:18:20,545 - src.interface.news_classifier - INFO - Loading model from model/model.pkl

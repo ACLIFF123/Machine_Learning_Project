@@ -20,7 +20,7 @@ def build_model_pipeline(model_type="logistic"):
     elif model_type == "random_forest":
         return Pipeline([
             ("tfidf", TfidfVectorizer(stop_words="english")),
-            ("clf", RandomForestClassifier(n_estimators=200))
+            ("clf", RandomForestClassifier(n_estimators=100))
         ])
 
     else:
