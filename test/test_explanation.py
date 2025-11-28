@@ -14,7 +14,6 @@ class FakeChatbot:
 
 
 def test_explain(monkeypatch):
-    # Arrange: patch Chatbot inside the ExplanationLLM module
     fake_llm = FakeChatbot("A clear explanation.")
     monkeypatch.setattr(
         explanation_module,
@@ -28,16 +27,12 @@ def test_explain(monkeypatch):
     category = "business"
     confidence = 0.87
 
-    # Act
     explanation = explainer.explain(headline, category, confidence)
 
-    # Assert: output from fake LLM
     assert explanation == "A clear explanation."
 
-    # Assert: LLM was actually called
     assert fake_llm.calls == 1
 
-    # Prompt structure checks (behavioral testing)
     prompt = fake_llm.last_prompt
     assert "<|system|>" in prompt
     assert "You explain why it is that news categories" in prompt
