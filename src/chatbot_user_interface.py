@@ -1,12 +1,23 @@
 from src.interface.news_classifier import NewsClassifier
 from src.logger import get_logger
+from src.models.extraction import ExtractorLLM
 
 logger = get_logger(__name__)
 
+extractor_llm = ExtractorLLM()
 
-def ui_predict(text: str):
+classifier = NewsClassifier("model/model.pkl")
+
+
+def ui_process(text: str) -> tuple[str, str, str]:
+
     classifier = NewsClassifier("model/model.pkl")
-    return classifier.classify(text)
+
+    headline = extractor_llm.extract(text)
+
+    category = classifier.classify(headline)
+
+    return headline, category
 
 def main():
     print("===================================")
@@ -16,19 +27,25 @@ def main():
     classifier = NewsClassifier("model/model.pkl")
 
     while True:
-        user_input_val = input("Enter News Title: ").strip()
+        user_input = input("Enter News Title: ").strip()
 
-        if user_input_val.lower() in ["quit", "exit"]:
+        if user_input.lower() in ["quit", "exit"]:
             print("\n Goodbye!")
             break
 
-        if not user_input_val:
+        if not user_input:
             print("Please enter some text im am only here to help.")
 
         try:
-            prediction = classifier.classify(user_input_val)
-            print(f"[Result] {prediction}\n")
+        
+            headline, category = ui_process(user_input)
 
+            print(f"\n[Extracted Headline] {headline}")
+
+
+            print(f"[Category] {category}")
+
+            
         except Exception as e:
             logger.error(e)
             print(f"Error: {e}")

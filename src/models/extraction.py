@@ -8,6 +8,7 @@ class ExtractorLLM:
             "<|system|>\n"
             "You extract news headlines. "
             "Return ONLY the cleaned headline. No explanations.\n"
+            "Dont add anything to the headline"
             "<|end|>\n"
         )
 
