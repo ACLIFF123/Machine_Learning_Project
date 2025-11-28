@@ -342,3 +342,34 @@ Classification Report:
 weighted avg       1.00      1.00      1.00         2
 
 2025-11-27 12:18:20,545 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 12:52:46,767 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 13:03:40,276 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 13:03:56,571 - __main__ - ERROR - name 'explationation_propt' is not defined
+2025-11-27 13:04:24,970 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 13:04:33,988 - __main__ - ERROR - Chatbot.generate_reply() missing 1 required positional argument: 'prompt'
+2025-11-27 13:05:19,523 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 14:06:43,086 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 14:16:40,196 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 14:36:58,684 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 15:08:50,895 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 15:13:24,878 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 15:14:32,146 - __main__ - ERROR - name 'raw_input_text' is not defined
+2025-11-27 15:15:13,193 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 15:22:25,588 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 15:27:23,897 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 15:28:04,195 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 15:28:34,388 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-27 15:28:59,521 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 11:58:29,950 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 12:26:30,397 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 12:26:47,965 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 12:26:48,019 - __main__ - ERROR - model 'llama3' not found (status code: 404)
+2025-11-28 12:28:09,088 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 12:28:27,929 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 12:28:27,974 - __main__ - ERROR - model 'tinyllama' not found (status code: 404)
+2025-11-28 12:30:44,490 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 12:30:57,505 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 12:30:57,539 - __main__ - ERROR - model 'llama3.1' not found (status code: 404)
+2025-11-28 12:32:43,809 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 12:32:58,688 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 12:51:49,222 - src.interface.news_classifier - INFO - Loading model from model/model.pkl

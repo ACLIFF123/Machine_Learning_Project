@@ -9,7 +9,6 @@ def ui_predict(text: str):
     return classifier.classify(text)
 
 def main():
-
     print("===================================")
     print("Welcome to Your News Categry Identifier")
     print("===================================\n")
@@ -17,18 +16,17 @@ def main():
     classifier = NewsClassifier("model/model.pkl")
 
     while True:
-        # Get user input
-        user_input = input("Enter News Title: ").strip()
+        user_input_val = input("Enter News Title: ").strip()
 
-        # Exit condition
-        if user_input.lower() in ["quit", "exit"]:
+        if user_input_val.lower() in ["quit", "exit"]:
             print("\n Goodbye!")
             break
 
-        if not user_input:
+        if not user_input_val:
             print("Please enter some text im am only here to help.")
+
         try:
-            prediction = classifier.classify(user_input)
+            prediction = classifier.classify(user_input_val)
             print(f"[Result] {prediction}\n")
 
         except Exception as e:

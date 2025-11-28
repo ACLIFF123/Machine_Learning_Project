@@ -1,5 +1,5 @@
 from src.interface.news_classifier import NewsClassifier
-from src.user_interface import ui_predict
+from src.chatbot_user_interface import ui_predict
 
 
 
