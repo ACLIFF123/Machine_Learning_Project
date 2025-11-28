@@ -373,3 +373,23 @@ weighted avg       1.00      1.00      1.00         2
 2025-11-28 12:32:43,809 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
 2025-11-28 12:32:58,688 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
 2025-11-28 12:51:49,222 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 13:03:07,600 - src.models.model_classifier - INFO - Training model
+2025-11-28 13:03:07,616 - src.models.model_classifier - INFO - Training model
+2025-11-28 13:03:07,635 - src.models.model_classifier - INFO - Evaluating model
+2025-11-28 13:03:07,666 - src.models.model_classifier - INFO - Accuracy:  1.000
+2025-11-28 13:03:07,666 - src.models.model_classifier - INFO - 
+Confusion Matrix:
+[[1 0]
+ [0 1]]
+2025-11-28 13:03:07,667 - src.models.model_classifier - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    sci/tech       1.00      1.00      1.00         1
+      sports       1.00      1.00      1.00         1
+
+    accuracy                           1.00         2
+   macro avg       1.00      1.00      1.00         2
+weighted avg       1.00      1.00      1.00         2
+
+2025-11-28 13:03:07,701 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
