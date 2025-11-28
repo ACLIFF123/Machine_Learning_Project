@@ -1,10 +1,12 @@
 from src.interface.news_classifier import NewsClassifier
 from src.logger import get_logger
 from src.models.extraction import ExtractorLLM
+from src.models.explanation import ExplanationLLM
 
 logger = get_logger(__name__)
 
 extractor_llm = ExtractorLLM()
+expliainer_llm = ExplanationLLM()
 
 classifier = NewsClassifier("model/model.pkl")
 
@@ -17,7 +19,10 @@ def ui_process(text: str) -> tuple[str, str, str]:
 
     category = classifier.classify(headline)
 
-    return headline, category
+    explination = expliainer_llm.explain(headline,category)
+
+
+    return headline, category, explination
 
 def main():
     print("===================================")
@@ -38,14 +43,14 @@ def main():
 
         try:
         
-            headline, category = ui_process(user_input)
+            headline, category, explination = ui_process(user_input)
 
             print(f"\n[Extracted Headline] {headline}")
 
-
             print(f"[Category] {category}")
 
-            
+            print(f"[Explination] {explination}")
+
         except Exception as e:
             logger.error(e)
             print(f"Error: {e}")

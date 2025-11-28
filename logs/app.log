@@ -684,3 +684,9 @@ Classification Report:
    macro avg       1.00      1.00      1.00         2
 weighted avg       1.00      1.00      1.00         2
 
+2025-11-28 14:04:44,538 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 14:04:46,440 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 14:05:01,498 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 14:11:40,892 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 14:11:42,206 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
+2025-11-28 14:11:58,491 - src.interface.news_classifier - INFO - Loading model from model/model.pkl
