@@ -1,20 +1,164 @@
-Machine Learning Project - Natural Language Classifier
+📰 Natural Language News Classifier with RAG & Chatbot Interface
+Project Overview
 
-Objectives:
-    Build a machine learning project which combines a simple classifier with a language model
-    Understand how to use a pre-trained language model in a machine learning project
-    Create a professional, production-ready machine learning application
-    
-Overview
-Summary:
-    Choose a real-world dataset from a curated list
-    Ingest and store that data reliably, using a local script which will form the basis for an AWS Lambda with RDS
-    Train a model on that data to understand or generate insights
-    Create a chatbot interface that uses your trained model
-    Add RAG (Retrieval-Augmented Generation) functionality using simple local files
+This project is a machine learning–powered natural language classifier that categorizes news article titles into predefined topics and explains the reasoning behind each classification. It combines a traditional text classifier with a pre-trained language model, enhanced by Retrieval-Augmented Generation (RAG) for contextual explanations.
 
-ORIGIN
+The system is designed to mirror real-world ML workflows, including data ingestion, model training, API-ready architecture, and a chatbot-style interface.
 
-AG is a collection of more than 1 million news articles. News articles have been gathered from more than 2000 news sources by ComeToMyHead in more than 1 year of activity. ComeToMyHead is an academic news search engine which has been running since July, 2004. The dataset is provided by the academic comunity for research purposes in data mining (clustering, classification, etc), information retrieval (ranking, search, etc), xml, data compression, data streaming, and any other non-commercial activity. For more information, please refer to the link http://www.di.unipi.it/~gulli/AG_corpus_of_news_articles.html .
+Objectives
 
-The AG's news topic classification dataset is constructed by Xiang Zhang (xiang.zhang@nyu.edu) from the dataset above. It is used as a text classification benchmark in the following paper: Xiang Zhang, Junbo Zhao, Yann LeCun. Character-level Convolutional Networks for Text Classification. Advances in Neural Information Processing Systems 28 (NIPS 2015).
+Build an end-to-end machine learning application
+
+Use a pre-trained language model alongside a custom classifier
+
+Train a model on a real-world news dataset
+
+Explain why a piece of text belongs to a specific category
+
+Implement RAG using local document retrieval
+
+Structure the project for production readiness (AWS Lambda + RDS compatible)
+
+Dataset
+AG News Topic Classification Dataset
+
+This project uses the AG News Topic Classification Dataset, derived from the AG Corpus of News Articles.
+
+Key Facts:
+
+Over 1 million news articles
+
+Collected from 2,000+ news sources
+
+Curated for academic research in:
+
+Text classification
+
+Information retrieval
+
+Data mining
+
+The classification benchmark was introduced in:
+
+Xiang Zhang, Junbo Zhao, Yann LeCun (2015)
+Character-level Convolutional Networks for Text Classification
+NeurIPS 2015
+
+Categories
+
+Each news title belongs to one of the following categories:
+
+World
+
+Sports
+
+Business
+
+Sci/Tech
+
+What This Project Does
+1. Data Ingestion
+
+Loads and validates news titles and labels
+
+Stores data locally (designed to scale to AWS Lambda + RDS)
+
+Ensures reproducibility and reliability
+
+2. Model Training
+
+Trains a supervised text classifier on news titles
+
+Uses vectorization or embeddings derived from a pre-trained language model
+
+Optimized for fast inference and explainability
+
+3. News Classification
+
+Given a news title, the model:
+
+Predicts the most likely category
+
+Outputs confidence scores (optional)
+
+Passes the prediction to the language model for explanation
+
+Example Input:
+
+"Apple unveils new AI-powered MacBooks"
+
+
+Output:
+
+Category: Sci/Tech
+Explanation:
+This headline discusses Apple releasing new hardware with artificial intelligence features, which places it within science and technology news.
+
+Explanation Engine (Reasoning)
+
+The reasoning layer uses:
+
+The classifier’s prediction
+
+Retrieved examples from similar articles (RAG)
+
+A pre-trained language model
+
+This allows the system to justify predictions in natural language, making the model more interpretable and user-friendly.
+
+Retrieval-Augmented Generation (RAG)
+
+Uses local document files containing:
+
+Sample headlines
+
+Category descriptions
+
+Historical examples
+
+Retrieves relevant context before generating explanations
+
+Improves accuracy and reduces hallucinations
+
+Chatbot Interface
+
+The project includes a chatbot-style interface where users can:
+
+Enter a news headline
+
+Receive a category prediction
+
+Read a human-like explanation of the decision
+
+This simulates how an ML model might be exposed in a customer-facing application.
+
+Use Cases
+
+News aggregation platforms
+
+Content moderation systems
+
+Recommendation engines
+
+NLP portfolio projects
+
+Academic research demonstrations
+
+Disclaimer
+
+This project uses the AG News dataset strictly for research and non-commercial purposes, in accordance with the dataset’s license.
+
+Future Improvements
+
+Infrastructure as Code: use Terraform to provision AWS resources and deploy an AWS Lambda version of the ingestion/inference pipeline (with environment variables, IAM roles, and optional RDS connectivity)
+
+Add CI/CD (GitHub Actions) to automate testing, model packaging, and Lambda deployments
+Fine-tune transformer-based classifiers
+
+Add multilingual support
+
+Deploy via REST or GraphQL API
+
+Integrate vector databases (e.g., FAISS)
+
+Add confidence calibration and evaluation dashboards
